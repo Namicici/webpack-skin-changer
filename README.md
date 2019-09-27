@@ -1,3 +1,5 @@
+核心代码来源https://github.com/hzsrc/webpack-theme-color-replacer，在此基础上支持对特定变量的替换，比如var(--search-bar-background-color)；对提取的样式做了js封装，以便跨域或者离线情况下获取皮肤样式，同时也将样式文件写入了入口文件，可以避免异步获取皮肤样式的开销。
+
 This plugin can extract theme color styles from all the outputed css files (such as element-ui theme colors), and make a 'theme-colors.css' file which only contains color styles. At runtime in your web page, the client part will help you to download this css file, and then replace the colors into new customized colors dynamicly.
 
 This is a sample:
@@ -7,13 +9,13 @@ Implementation (Chinese):
 https://segmentfault.com/a/1190000016061608
 
 # 1.Install
-npm i -D @namicici/webpack-theme-color-replacer
+npm i -D webpack-skin-changer
 
 # 2.Cofig for webpack
 
 ````js
 
-const ThemeColorReplacer = require('@namicici/webpack-theme-color-replacer')
+const ThemeColorReplacer = require('webpack-skin-changer')
 
 module.exports = {
     .....
@@ -41,7 +43,7 @@ https://github.com/hzsrc/vue-element-ui-scaffold-webpack4/blob/master/build/webp
 Like this:
 
 ````js
-import replacer from 'webpack-theme-color-replacer/client'
+import replacer from 'webpack-skin-changer/client'
 
 // change theme colors at runtime.
 export function changeColor(newColor) {
