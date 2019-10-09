@@ -37,9 +37,10 @@ module.exports = {
 				// elStyle = document.head.appendChild(document.createElement('style'))
 				// 这里的元素要保证最新，最好放在body下面
 				elStyle = document.getElementById('skinNode')
+				var refNode = document.getElementById('App') || document.getElementById('app')
 				if (!elStyle) {
 					elStyle = document.createElement('style')
-					document.body.prepend(elStyle)
+					document.body.insertBefore(elStyle, refNode)
 				}
                 idMap[url] = 'css_' + (+new Date())
                 elStyle.setAttribute('id', idMap[url])
