@@ -1,5 +1,5 @@
 {
-  "name": "@namicici/webpack-skin-changer",
+  "name": "webpack-skin-changer",
   "version": "1.0.0",
   "description": "A webpack plugin designed to dynamicly change the theme colors at runtime. 实现运行时快速动态替换主题色的webpack插件. ",
   "main": "src/index.js",
@@ -24,14 +24,20 @@
     "replacer",
     "runtime"
   ],
-  "author": {
-    "name": "Namicici",
-    "email": "namicici.lee@outlook.com",
-    "url": "https://github.com/Namicici/webpack-skin-changer"
-  },
+  "author": "Namicici <namicici.lee@outlook.com> (https://github.com/Namicici/webpack-skin-changer)",
   "license": "MIT",
-  "readme": "readme.md",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Namicici/webpack-skin-changer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Namicici/webpack-skin-changer/issues"
+  },
+  "homepage": "https://github.com/Namicici/webpack-skin-changer#readme"
 }
