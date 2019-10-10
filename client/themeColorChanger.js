@@ -1,5 +1,6 @@
 ﻿var idMap = {};
 var theme_COLOR_config;
+const refColors = window.__theme_COLOR_cfg.colors
 
 module.exports = {
     changeColor: function (options, promiseForIE) {
@@ -52,7 +53,7 @@ module.exports = {
         }
 
         function setCssTo(elStyle, cssText) {
-            cssText = _this.replaceCssText(cssText, oldColors, newColors)
+            cssText = _this.replaceCssText(window.DocerThemeStyles, refColors, newColors)
             elStyle.color = newColors.join('|')
             elStyle.innerText = cssText
             theme_COLOR_config.colors = newColors
